@@ -102,10 +102,17 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>JAPANESQUE YAKAI 名古屋城夜会</title>
+        <meta
+          name="description"
+          content="古くからある日本各地の伝統文化を見直し、革新的なクリエイティブやテクノロジーを掛け合わせる日本文化更新プロジェクト「JAPANESQUE
+              PROJECT（ジャパネスクプロジェクト）」の一環として、 『名古屋城夜会
+              by 1→10』の総合演出を手がけました。このイベントは名古屋を代表する観光スポットの筆頭として挙げられる名古屋城にて、2019年12月14日から2020年1月13日までの27日間実施しました。"
+        />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="robots" content="noindex" />
       </Head>
       <header className={styles.header}>
-        <a className={styles.headerLogo}>
+        <a className={styles.headerLogo} href="/">
           <Image
             src={logoImage}
             alt="1→10"
@@ -177,6 +184,7 @@ export default function Home() {
                 layout="responsive"
                 width={752}
                 height={1065}
+                alt="JAPANESQUE YAKAI 名古屋城夜会"
               ></Image>
             </motion.div>
           </div>
@@ -430,6 +438,7 @@ export default function Home() {
                 width={550}
                 height={310}
                 layout="responsive"
+                alt="芝離宮夜会"
               ></Image>
               <p className={styles.relatedProjectCaption}>芝離宮夜会</p>
             </SwiperSlide>
@@ -439,6 +448,7 @@ export default function Home() {
                 width={550}
                 height={310}
                 layout="responsive"
+                alt="江戸夏夜会"
               ></Image>
               <p className={styles.relatedProjectCaption}>江戸夏夜会</p>
             </SwiperSlide>
@@ -448,6 +458,7 @@ export default function Home() {
                 width={550}
                 height={310}
                 layout="responsive"
+                alt="江戸秋夜会"
               ></Image>
               <p className={styles.relatedProjectCaption}>江戸秋夜会</p>
             </SwiperSlide>
