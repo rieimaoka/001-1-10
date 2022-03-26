@@ -6,7 +6,23 @@ import "swiper/css/pagination";
 import styles from "../styles/Home.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+
+import logoImage from "../public/logo_1-10.png";
+import mainImage from "../public/img-main.jpg";
+import Image01 from "../public/img-01.jpg";
+import Image02 from "../public/img-02.jpg";
+import Image03 from "../public/img-03.jpg";
+import Image04 from "../public/img-04.jpg";
+import Image05 from "../public/img-05.jpg";
+import Image06 from "../public/img-06.jpg";
+import ImageCaseStudy01 from "../public/img-case-study-01.jpg";
+import ImageCaseStudy02 from "../public/img-case-study-02.jpg";
+import ImageCaseStudy01Sp from "../public/img-case-study-01_sp.jpg";
+import ImageCaseStudy02Sp from "../public/img-case-study-02_sp.jpg";
+import ImageWorks01 from "../public/img-works-01.jpg";
+import ImageWorks02 from "../public/img-works-02.jpg";
+import ImageWorks03 from "../public/img-works-03.jpg";
 
 const sectionVariants = {
   offscreen: {
@@ -91,7 +107,7 @@ export default function Home() {
       <header className={styles.header}>
         <a className={styles.headerLogo}>
           <Image
-            src="/logo_1-10.png"
+            src={logoImage}
             alt="1→10"
             layout="responsive"
             width={98}
@@ -125,7 +141,7 @@ export default function Home() {
             variants={imgVariants}
           >
             <Image
-              src="/img-main.jpg"
+              src={mainImage}
               alt=" JAPANESQUE YAKAI 名古屋城夜会"
               layout="responsive"
               width={1920}
@@ -157,7 +173,7 @@ export default function Home() {
               variants={imgVariants}
             >
               <Image
-                src="/img-01.jpg"
+                src={Image01}
                 layout="responsive"
                 width={752}
                 height={1065}
@@ -181,7 +197,7 @@ export default function Home() {
                 variants={imgVariants}
               >
                 <Image
-                  src="/img-02.jpg"
+                  src={Image02}
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
                   layout="responsive"
                   width={630}
@@ -197,7 +213,7 @@ export default function Home() {
                 variants={imgVariants}
               >
                 <Image
-                  src="/img-03.jpg"
+                  src={Image03}
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
                   layout="responsive"
                   width={630}
@@ -213,7 +229,7 @@ export default function Home() {
                 variants={imgVariants}
               >
                 <Image
-                  src="/img-04.jpg"
+                  src={Image04}
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
                   layout="responsive"
                   width={630}
@@ -229,7 +245,7 @@ export default function Home() {
                 variants={imgVariants}
               >
                 <Image
-                  src="/img-05.jpg"
+                  src={Image05}
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
                   layout="responsive"
                   width={955}
@@ -245,7 +261,7 @@ export default function Home() {
                 variants={imgVariants}
               >
                 <Image
-                  src="/img-06.jpg"
+                  src={Image06}
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
                   layout="responsive"
                   width={955}
@@ -328,7 +344,7 @@ export default function Home() {
             <div className={styles.caseStudyImage}>
               <div className="hidden-sm">
                 <Image
-                  src="/img-case-study-01.jpg"
+                  src={ImageCaseStudy01}
                   alt="Smart Digital Field"
                   layout="responsive"
                   width={310}
@@ -337,7 +353,7 @@ export default function Home() {
               </div>
               <div className="hidden-md">
                 <Image
-                  src="/img-case-study-01_sp.jpg"
+                  src={ImageCaseStudy01Sp}
                   alt="Smart Digital Field"
                   layout="responsive"
                   width={355}
@@ -372,7 +388,7 @@ export default function Home() {
             <div className={styles.caseStudyImage}>
               <div className="hidden-sm">
                 <Image
-                  src="/img-case-study-02.jpg"
+                  src={ImageCaseStudy02}
                   alt="世界初の MagicLeap1 を用いた 常設劇場"
                   layout="responsive"
                   width={310}
@@ -381,7 +397,7 @@ export default function Home() {
               </div>
               <div className="hidden-md">
                 <Image
-                  src="/img-case-study-02_sp.jpg"
+                  src={ImageCaseStudy02Sp}
                   alt="世界初の MagicLeap1 を用いた 常設劇場"
                   layout="responsive"
                   width={355}
@@ -410,28 +426,28 @@ export default function Home() {
           >
             <SwiperSlide className={styles.swiperSlide}>
               <Image
-                className="img-responsive"
-                src="/img-works-01.jpg"
+                src={ImageWorks01}
                 width={550}
                 height={310}
+                layout="responsive"
               ></Image>
               <p className={styles.relatedProjectCaption}>芝離宮夜会</p>
             </SwiperSlide>
             <SwiperSlide className={styles.swiperSlide}>
               <Image
-                className="img-responsive"
-                src="/img-works-02.jpg"
+                src={ImageWorks02}
                 width={550}
                 height={310}
+                layout="responsive"
               ></Image>
               <p className={styles.relatedProjectCaption}>江戸夏夜会</p>
             </SwiperSlide>
             <SwiperSlide className={styles.swiperSlide}>
               <Image
-                className="img-responsive"
-                src="/img-works-03.jpg"
+                src={ImageWorks03}
                 width={550}
                 height={310}
+                layout="responsive"
               ></Image>
               <p className={styles.relatedProjectCaption}>江戸秋夜会</p>
             </SwiperSlide>
