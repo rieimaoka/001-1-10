@@ -1,0 +1,104 @@
+@use 'sass:math';
+
+:root {
+  --black: #000;
+  --white: #fff;
+
+  font-size: 1rem;
+}
+
+@mixin fz($fontSize: false, $lineHeight: false, $letterSpacing: false) {
+  @if ($fontSize) {
+    font-size: math.div($fontSize, 16) + rem;
+  }
+
+  @if ($lineHeight) {
+    line-height: math.div($lineHeight, $fontSize);
+  }
+
+  @if ($letterSpacing) {
+    letter-spacing: ($letterSpacing) + em;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+
+  @media (--sm) {
+    @include fz(12, 25, 0.03);
+  }
+
+  @media (--md) {
+    @include fz(24, 54, 0.03);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.swiper-pagination-progressbar {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
+  left: calc(50% - 130px) !important;
+  width: 260px !important;
+  height: 2px !important;
+  background: rgb(255 255 255 / 30%);
+}
+
+.swiper-pagination-progressbar-fill {
+  background: #fff !important;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+@custom-media --sm (max-width: 48rem);
+@custom-media --md (min-width: 48.0625rem);
+
+.hidden-md {
+  @media (--md) {
+    display: none;
+  }
+}
+
+.hidden-sm {
+  @media (--sm) {
+    display: none;
+  }
+}

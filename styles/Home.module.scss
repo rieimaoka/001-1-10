@@ -1,0 +1,563 @@
+@use 'sass:math';
+
+@mixin fz($fontSize: false, $lineHeight: false, $letterSpacing: false) {
+  @if ($fontSize) {
+    font-size: math.div($fontSize, 16) + rem;
+  }
+
+  @if ($lineHeight) {
+    line-height: math.div($lineHeight, $fontSize);
+  }
+
+  @if ($letterSpacing) {
+    letter-spacing: ($letterSpacing) + em;
+  }
+}
+
+.sectionInner {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (--md) {
+    width: math.div(1460, 1920) * 100%;
+    max-width: 1460px;
+  }
+
+  @media (--sm) {
+    max-width: calc(100% - 60px);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  background: var(--black);
+
+  @media (--md) {
+    padding: 57px 69px 57px 72px;
+  }
+
+  @media (--sm) {
+    padding: 17px 16px;
+  }
+}
+
+.headerLogo {
+  display: block;
+  line-height: 1;
+
+  @media (--md) {
+    width: 98px;
+  }
+
+  @media (--sm) {
+    width: 49px;
+  }
+}
+
+.headerMenu {
+  display: block;
+
+  @media (--md) {
+    margin-top: 5px;
+  }
+
+  @media (--sm) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 49px;
+    height: 49px;
+  }
+  span {
+    display: block;
+    height: 2px;
+    background: var(--white);
+
+    @media (--md) {
+      width: 17px;
+    }
+    @media (--sm) {
+      width: 10px;
+    }
+  }
+
+  span:nth-child(1) {
+    @media (--md) {
+      width: 50%;
+      margin: 0 16px 0 auto;
+    }
+    @media (--sm) {
+      width: 10px;
+      margin: 18px 16px 0 auto;
+    }
+  }
+  span:nth-child(2) {
+    @media (--md) {
+      margin: 8px 0 7px;
+    }
+    @media (--sm) {
+      width: 16px;
+      margin: 4px 16px 4px auto;
+    }
+  }
+  span:nth-child(3) {
+    @media (--md) {
+      width: 50%;
+      margin-right: auto;
+    }
+    @media (--sm) {
+      width: 10px;
+      margin: 0 auto 20px 17px;
+    }
+  }
+}
+.pageHeader {
+  position: relative;
+
+  @media (--md) {
+    margin: 80px auto 138px;
+  }
+
+  @media (--sm) {
+    padding: 45px 0 27px;
+  }
+}
+
+.pageTitle {
+  letter-spacing: 0.02em;
+
+  @media (--md) {
+    @include fz(100, 110);
+
+    padding-top: 44px;
+    margin-bottom: 42px;
+  }
+
+  @media (--sm) {
+    @include fz(27, 31);
+
+    margin-bottom: 40px;
+  }
+}
+
+.pageHeaderLink {
+  @media (--md) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.pageTitle span {
+  @media (--md) {
+    @include fz(90);
+  }
+}
+
+.link {
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  border-bottom: solid 2px var(--black);
+
+  @media (--md) {
+    @include fz(20, 33);
+  }
+
+  @media (--sm) {
+    @include fz(12, 18);
+  }
+}
+
+.date {
+  @include fz(26, 26);
+
+  color: rgb(159 159 159);
+
+  @media (--sm) {
+    display: none;
+  }
+}
+
+.hero {
+  overflow: hidden;
+  @media (--md) {
+    margin-bottom: 125px;
+  }
+
+  @media (--sm) {
+    margin-bottom: 42px;
+  }
+}
+
+.sectionTitle {
+  position: relative;
+  @media (--md) {
+    @include fz(30);
+
+    margin-bottom: 37px;
+  }
+  display: flex;
+  font-weight: bold;
+  line-height: 1;
+
+  @media (--sm) {
+    @include fz(15);
+
+    margin-bottom: 11px;
+  }
+
+  &:after {
+    @media (--md) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      height: 37px;
+      content: '';
+      background: var(--white);
+    }
+  }
+
+  span {
+    display: inline-block;
+  }
+}
+
+.poster {
+  @media (--md) {
+    width: math.div(750, 1460) * 100%;
+    max-width: 750px;
+    margin: 96px auto 107px;
+  }
+
+  @media (--sm) {
+    margin: 38px 0 41px;
+  }
+}
+
+.poster {
+  overflow: hidden;
+}
+
+.images {
+  @media (--md) {
+    position: relative;
+    margin-top: 95px;
+    margin-bottom: 129px;
+  }
+
+  @media (--sm) {
+    margin: 38px 0 42px;
+  }
+
+  li {
+    overflow: hidden;
+  }
+}
+
+.images::before,
+.images::after {
+  @media (--md) {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: math.div(72, 1920) * 100%;
+    height: 100%;
+    content: '';
+
+    background: var(--white);
+  }
+}
+
+.images::before {
+  left: 0;
+}
+
+.images::after {
+  right: 0;
+}
+
+.images ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images li:nth-child(-n + 3) {
+  width: calc(630 / 1920 * 100%);
+  margin: 0 calc(5 / 1920 * 100%) 12px;
+
+  @media (--sm) {
+    margin-bottom: 6px;
+  }
+}
+
+.images li:nth-child(n + 4) {
+  width: calc(950 / 1920 * 100%);
+  margin: 0 calc(5 / 1920 * 100%);
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creditList {
+  @media (--md) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (--sm) {
+    margin-top: 20px;
+  }
+}
+
+.CreditTitle {
+  @media (--sm) {
+    margin-bottom: 19px;
+  }
+}
+
+.creditList dl {
+  @media (--md) {
+    @include fz(24, 36, 0);
+
+    width: calc(680 / 1460 * 100%);
+  }
+
+  @media (--sm) {
+    @include fz(12, 18, 0);
+  }
+}
+
+.creditList dt {
+  @media (--md) {
+    margin-bottom: 4px;
+    opacity: 0.5;
+  }
+
+  @media (--sm) {
+    margin-bottom: 1px;
+  }
+}
+
+.creditList dd {
+  @media (--md) {
+    margin-bottom: 32px;
+  }
+
+  @media (--sm) {
+    margin-bottom: 17px;
+  }
+}
+
+.casestudy {
+  @media (--md) {
+    width: math.div(1460, 1920) * 100%;
+    max-width: 1460px;
+    margin: 83px auto 140px;
+  }
+
+  @media (--sm) {
+    width: calc(100% - 20px);
+    margin: 34px auto 44px;
+  }
+}
+
+.casestudyTitle {
+  font-weight: bold;
+
+  @media (--md) {
+    @include fz(60, 60, 0);
+
+    margin-bottom: 98px;
+    text-align: center;
+  }
+
+  @media (--sm) {
+    @include fz(30, 35, 0);
+
+    margin-bottom: 34px;
+    margin-left: 20px;
+  }
+}
+
+.caseStudyNo {
+  @media (--md) {
+    @include fz(30, 30, 0);
+
+    margin-bottom: 25px;
+  }
+
+  @media (--sm) {
+    @include fz(15, 15, 0);
+
+    margin-bottom: 12px;
+  }
+}
+
+.caseStudyHeading {
+  margin-bottom: 30px;
+
+  @media (--md) {
+    @include fz(42, 60, 0);
+  }
+
+  @media (--sm) {
+    @include fz(19, 25, 0);
+  }
+}
+
+.caseStudyBlock {
+  display: flex;
+  justify-content: space-between;
+
+  @media (--sm) {
+    flex-direction: column-reverse;
+  }
+}
+
+.caseStudyBlock + .caseStudyBlock {
+  @media (--md) {
+    margin-top: 84px;
+  }
+
+  @media (--sm) {
+    margin-top: 70px;
+  }
+}
+
+.caseStudyBody {
+  @media (--md) {
+    width: calc(780 / 1460 * 100%);
+  }
+
+  @media (--sm) {
+    margin: 23px 20px 0;
+  }
+}
+
+.caseStudyDescription {
+  @media (--md) {
+    @include fz(28, 56, 0);
+  }
+
+  @media (--sm) {
+    @include fz(12, 27, 0);
+
+    margin-bottom: 24px;
+  }
+}
+
+.caseStudyImage {
+  @media (--md) {
+    width: calc(620 / 1460 * 100%);
+    margin-top: 41px;
+  }
+
+  p {
+    @media (--md) {
+      @include fz(12);
+
+      margin-top: 13px;
+    }
+
+    @media (--sm) {
+      @include fz(9);
+
+      margin-top: 3px;
+    }
+  }
+}
+
+.relatedProject {
+  background: var(--black);
+
+  @media (--md) {
+    padding-top: 112px;
+    padding-bottom: 140px;
+  }
+
+  @media (--sm) {
+    padding-top: 46px;
+    padding-bottom: 50px;
+  }
+}
+
+.relatedProjectTitle {
+  color: var(--white);
+  text-align: center;
+
+  @media (--md) {
+    @include fz(42, 42);
+
+    margin-bottom: 102px;
+  }
+
+  @media (--sm) {
+    @include fz(18, 18);
+
+    margin-bottom: 26px;
+  }
+}
+
+.swiperSlide {
+  @media (--md) {
+    width: 550px;
+  }
+
+  @media (--sm) {
+    width: calc(100% - 100px);
+  }
+}
+
+.relatedProjectCaption {
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  @media (--md) {
+    @include fz(24, 25);
+
+    margin-top: 30px;
+  }
+
+  @media (--sm) {
+    @include fz(13, 14);
+
+    margin-top: 12px;
+  }
+}
+
+.relatedSlider {
+  @media (--md) {
+    padding-bottom: 72px;
+  }
+
+  @media (--sm) {
+    padding-bottom: 37px;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.yellow {
+  color: yellow;
+}
+
+.show {
+  background: pink;
+}

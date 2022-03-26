@@ -1,0 +1,24 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": ["stylelint-config-recess-order"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "include",
+          "mixin",
+          "if",
+          "use"
+        ]
+      }
+    ],
+    "string-quotes": "single"
+  },
+  "ignoreFiles": ["**/node_modules/**"]
+}
