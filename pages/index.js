@@ -65,7 +65,7 @@ const textVariants = {
 
 function WorksTitle({ text }) {
   return (
-    <h3 className={styles.sectionTitle}>
+    <h2 className={styles.sectionTitle}>
       {Array.from(text).map((_, i) => (
         <motion.span
           viewport={{ once: true }}
@@ -76,7 +76,7 @@ function WorksTitle({ text }) {
           {_}
         </motion.span>
       ))}
-    </h3>
+    </h2>
   );
 }
 
