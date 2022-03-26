@@ -90,7 +90,13 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <a className={styles.headerLogo}>
-        <Image src="/logo_1-10.png" alt="1→10" className="img-responsive"></img>
+          <Image
+            src="/logo_1-10.png"
+            alt="1→10"
+            layout="responsive"
+            width={98}
+            height={30}
+          ></Image>
         </a>
         <div className={styles.headerMenu}>
           <span></span>
@@ -119,9 +125,11 @@ export default function Home() {
             variants={imgVariants}
           >
             <Image
-              className="img-responsive"
               src="/img-main.jpg"
               alt=" JAPANESQUE YAKAI 名古屋城夜会"
+              layout="responsive"
+              width={1920}
+              height={780}
             ></Image>
           </motion.div>
         </div>
@@ -148,7 +156,12 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
               variants={imgVariants}
             >
-              <Image className="img-responsive" src="/img-01.jpg"></img>
+              <Image
+                src="/img-01.jpg"
+                layout="responsive"
+                width={752}
+                height={1065}
+              ></Image>
             </motion.div>
           </div>
           <WorksTitle text="MISSION" />
@@ -170,6 +183,9 @@ export default function Home() {
                 <Image
                   src="/img-02.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
+                  layout="responsive"
+                  width={630}
+                  height={550}
                 ></Image>
               </motion.div>
             </li>
@@ -183,6 +199,9 @@ export default function Home() {
                 <Image
                   src="/img-03.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
+                  layout="responsive"
+                  width={630}
+                  height={550}
                 ></Image>
               </motion.div>
             </li>
@@ -196,6 +215,9 @@ export default function Home() {
                 <Image
                   src="/img-04.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
+                  layout="responsive"
+                  width={630}
+                  height={550}
                 ></Image>
               </motion.div>
             </li>
@@ -209,6 +231,9 @@ export default function Home() {
                 <Image
                   src="/img-05.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
+                  layout="responsive"
+                  width={955}
+                  height={540}
                 ></Image>
               </motion.div>
             </li>
@@ -222,6 +247,9 @@ export default function Home() {
                 <Image
                   src="/img-06.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
+                  layout="responsive"
+                  width={955}
+                  height={540}
                 ></Image>
               </motion.div>
             </li>
@@ -298,16 +326,24 @@ export default function Home() {
               <p className={styles.link}>READ MORE</p>
             </div>
             <div className={styles.caseStudyImage}>
-              <Image
-                className="img-responsive hidden-sm"
-                src="/img-case-study-01.jpg"
-                alt="Smart Digital Field"
-              ></Image>
-              <Image
-                className="img-responsive hidden-md"
-                src="/img-case-study-01_sp.jpg"
-                alt="Smart Digital Field"
-              ></Image>
+              <div className="hidden-sm">
+                <Image
+                  src="/img-case-study-01.jpg"
+                  alt="Smart Digital Field"
+                  layout="responsive"
+                  width={310}
+                  height={193}
+                ></Image>
+              </div>
+              <div className="hidden-md">
+                <Image
+                  src="/img-case-study-01_sp.jpg"
+                  alt="Smart Digital Field"
+                  layout="responsive"
+                  width={355}
+                  height={177}
+                ></Image>
+              </div>
               <p>現実空間とそっくりなバーチャル会場の様子</p>
             </div>
           </motion.a>
@@ -318,7 +354,7 @@ export default function Home() {
           >
             <div
               className={styles.caseStudyBody}
-              style={{ marginTop: 42 + "px" }}
+              style={{ marginTop: 42 + 'px' }}
             >
               <p className={styles.caseStudyNo}>CASE 02</p>
               <h3 className={styles.caseStudyHeading}>
@@ -334,16 +370,24 @@ export default function Home() {
               <p className={styles.link}>READ MORE</p>
             </div>
             <div className={styles.caseStudyImage}>
-              <Image
-                className="img-responsive hidden-sm"
-                src="/img-case-study-02.jpg"
-                alt="世界初の MagicLeap1 を用いた 常設劇場"
-              ></Image>
-              <Image
-                className="img-responsive hidden-md"
-                src="/img-case-study-02_sp.jpg"
-                alt="世界初の MagicLeap1 を用いた 常設劇場"
-              ></Image>
+              <div className="hidden-sm">
+                <Image
+                  src="/img-case-study-02.jpg"
+                  alt="世界初の MagicLeap1 を用いた 常設劇場"
+                  layout="responsive"
+                  width={310}
+                  height={193}
+                ></Image>
+              </div>
+              <div className="hidden-md">
+                <Image
+                  src="/img-case-study-02_sp.jpg"
+                  alt="世界初の MagicLeap1 を用いた 常設劇場"
+                  layout="responsive"
+                  width={355}
+                  height={177}
+                ></Image>
+              </div>
             </div>
           </motion.a>
         </div>
@@ -365,15 +409,30 @@ export default function Home() {
             className={styles.relatedSlider}
           >
             <SwiperSlide className={styles.swiperSlide}>
-              <Image className="img-responsive" src="/img-works-01.jpg"></img>
+              <Image
+                className="img-responsive"
+                src="/img-works-01.jpg"
+                width={550}
+                height={310}
+              ></Image>
               <p className={styles.relatedProjectCaption}>芝離宮夜会</p>
             </SwiperSlide>
             <SwiperSlide className={styles.swiperSlide}>
-              <Image className="img-responsive" src="/img-works-02.jpg"></img>
+              <Image
+                className="img-responsive"
+                src="/img-works-02.jpg"
+                width={550}
+                height={310}
+              ></Image>
               <p className={styles.relatedProjectCaption}>江戸夏夜会</p>
             </SwiperSlide>
             <SwiperSlide className={styles.swiperSlide}>
-              <Image className="img-responsive" src="/img-works-03.jpg"></img>
+              <Image
+                className="img-responsive"
+                src="/img-works-03.jpg"
+                width={550}
+                height={310}
+              ></Image>
               <p className={styles.relatedProjectCaption}>江戸秋夜会</p>
             </SwiperSlide>
           </Swiper>
