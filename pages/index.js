@@ -90,7 +90,7 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <a className={styles.headerLogo}>
-          <img src="/logo_1-10.png" alt="1→10" className="img-responsive"></img>
+        <Image src="/logo_1-10.png" alt="1→10" className="img-responsive"></img>
         </a>
         <div className={styles.headerMenu}>
           <span></span>
@@ -118,11 +118,11 @@ export default function Home() {
             viewport={{ once: true, amount: 0.5 }}
             variants={imgVariants}
           >
-            <img
+            <Image
               className="img-responsive"
               src="/img-main.jpg"
               alt=" JAPANESQUE YAKAI 名古屋城夜会"
-            ></img>
+            ></Image>
           </motion.div>
         </div>
         <div className={styles.sectionInner}>
@@ -148,7 +148,7 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
               variants={imgVariants}
             >
-              <img className="img-responsive" src="/img-01.jpg"></img>
+              <Image className="img-responsive" src="/img-01.jpg"></img>
             </motion.div>
           </div>
           <WorksTitle text="MISSION" />
@@ -167,10 +167,10 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={imgVariants}
               >
-                <img
+                <Image
                   src="/img-02.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
-                ></img>
+                ></Image>
               </motion.div>
             </li>
             <li>
@@ -180,10 +180,10 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={imgVariants}
               >
-                <img
+                <Image
                   src="/img-03.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
-                ></img>
+                ></Image>
               </motion.div>
             </li>
             <li>
@@ -193,10 +193,10 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={imgVariants}
               >
-                <img
+                <Image
                   src="/img-04.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
-                ></img>
+                ></Image>
               </motion.div>
             </li>
             <li>
@@ -206,10 +206,10 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={imgVariants}
               >
-                <img
+                <Image
                   src="/img-05.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
-                ></img>
+                ></Image>
               </motion.div>
             </li>
             <li>
@@ -219,10 +219,10 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={imgVariants}
               >
-                <img
+                <Image
                   src="/img-06.jpg"
                   alt="JAPANESQUE YAKAI 名古屋城夜会"
-                ></img>
+                ></Image>
               </motion.div>
             </li>
           </ul>
@@ -298,16 +298,16 @@ export default function Home() {
               <p className={styles.link}>READ MORE</p>
             </div>
             <div className={styles.caseStudyImage}>
-              <img
+              <Image
                 className="img-responsive hidden-sm"
                 src="/img-case-study-01.jpg"
                 alt="Smart Digital Field"
-              ></img>
-              <img
+              ></Image>
+              <Image
                 className="img-responsive hidden-md"
                 src="/img-case-study-01_sp.jpg"
                 alt="Smart Digital Field"
-              ></img>
+              ></Image>
               <p>現実空間とそっくりなバーチャル会場の様子</p>
             </div>
           </motion.a>
@@ -318,7 +318,7 @@ export default function Home() {
           >
             <div
               className={styles.caseStudyBody}
-              style={{ marginTop: 42 + 'px' }}
+              style={{ marginTop: 42 + "px" }}
             >
               <p className={styles.caseStudyNo}>CASE 02</p>
               <h3 className={styles.caseStudyHeading}>
@@ -334,16 +334,16 @@ export default function Home() {
               <p className={styles.link}>READ MORE</p>
             </div>
             <div className={styles.caseStudyImage}>
-              <img
+              <Image
                 className="img-responsive hidden-sm"
                 src="/img-case-study-02.jpg"
                 alt="世界初の MagicLeap1 を用いた 常設劇場"
-              ></img>
-              <img
+              ></Image>
+              <Image
                 className="img-responsive hidden-md"
                 src="/img-case-study-02_sp.jpg"
                 alt="世界初の MagicLeap1 を用いた 常設劇場"
-              ></img>
+              ></Image>
             </div>
           </motion.a>
         </div>
@@ -365,15 +365,15 @@ export default function Home() {
             className={styles.relatedSlider}
           >
             <SwiperSlide className={styles.swiperSlide}>
-              <img className="img-responsive" src="/img-works-01.jpg"></img>
+              <Image className="img-responsive" src="/img-works-01.jpg"></img>
               <p className={styles.relatedProjectCaption}>芝離宮夜会</p>
             </SwiperSlide>
             <SwiperSlide className={styles.swiperSlide}>
-              <img className="img-responsive" src="/img-works-02.jpg"></img>
+              <Image className="img-responsive" src="/img-works-02.jpg"></img>
               <p className={styles.relatedProjectCaption}>江戸夏夜会</p>
             </SwiperSlide>
             <SwiperSlide className={styles.swiperSlide}>
-              <img className="img-responsive" src="/img-works-03.jpg"></img>
+              <Image className="img-responsive" src="/img-works-03.jpg"></img>
               <p className={styles.relatedProjectCaption}>江戸秋夜会</p>
             </SwiperSlide>
           </Swiper>
